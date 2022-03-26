@@ -34,5 +34,5 @@ jobs:
           script: |
             cd /home/raa/automation
             ls -lah
-            docker rm -f web-go && docker rmi lucyfyy/web-example-golang:latest
-            docker-compose -f docker-compose-goweb.yml up -d
+            echo ${{ secrets.SSH_PASSWORD }} | sudo -S docker rm -f web-go && docker rmi lucyfyy/web-example-golang:latest
+            echo ${{ secrets.SSH_PASSWORD }} | sudo -S docker-compose -f docker-compose-goweb.yml up -d
