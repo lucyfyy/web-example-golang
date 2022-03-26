@@ -2,9 +2,9 @@ name: "Docker Image Scan"
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
   push:
-    branches: [ main ]
+    branches: [ master, stagging ]
 
 jobs:
   build:
